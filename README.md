@@ -26,11 +26,11 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Các bước để bắt đầu dự án:
 1. Clone Source Code:
 ```bash
-git clone git clone git@github.com:codeaamirkalimi/Task-Management-System-Laravel.git
+git clone https://github.com/tobithangem/PlanckProject.git
 ```
 
 ```bash
-git checkout develope
+git checkout develop
 ```
 
 2. Cài đặt các dependencies và packages cần thiết cho Laravel:
@@ -59,11 +59,11 @@ php artisan migrate
 php artisan serve
 ```
 
-Truy cập vào web qua http://localhost:8000
+Truy cập vào web qua http://127.0.0.1:8000/
 
 Các bước để code và đẩy code:
 
-1. Tại branch develope hoặc branch gốc của phase code tương ứng, lấy code mới nhất từ repository gitlab
+1. Tại branch develop hoặc branch gốc của phase code tương ứng, lấy code mới nhất từ repository gitlab
 
 ```bash
 git pull
@@ -89,7 +89,7 @@ git commit -m "<giải thích nội dung thanh đổi của commit>"
 4. Sau khi viết và test code ok, thực hiện đẩy code lên.
 
 ```bash
-git checkout develope
+git checkout develop
 ```
 
 ```bash
@@ -105,10 +105,10 @@ git checkout <tên nhánh>
 ```
 
 ```bash
-git rebase develope
+git rebase develop
 ```
 
-Bước này sẽ kéo toàn bộ log của nhánh develope sang nhánh đang code, commit của nhánh hiện tại sẽ ở trên cùng
+Bước này sẽ kéo toàn bộ log của nhánh develop sang nhánh đang code, commit của nhánh hiện tại sẽ ở trên cùng
 
 6. Đẩy code của nhánh hiện tại lên repository
 
@@ -118,6 +118,6 @@ git push origin <tên nhánh>
 
 Lưu ý: Tên nhánh lúc đẩy phải trùng với tên nhánh đang code và đẩy trong lúc đang checkout ở nhánh đó
 
-- Tuyệt đối không push lên nhánh develope hay push khi đang ở nhánh develope
+- Tuyệt đối không push lên nhánh  hay push khi đang ở nhánh develop
 
-7. Truy cập vào gitlab và thực hiện merge request nhánh vừa đẩy vào nhánh develope, chờ leader review code và merge
+7. Truy cập vào gitlab và thực hiện merge request nhánh vừa đẩy vào nhánh develop, chờ leader review code và merge
