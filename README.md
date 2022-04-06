@@ -26,7 +26,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Các bước để bắt đầu dự án:
 1. Clone Source Code:
 ```bash
-git clone git clone git@github.com:codeaamirkalimi/Task-Management-System-Laravel.git
+git clone https://github.com/tobithangem/PlanckProject.git
 ```
 
 ```bash
@@ -59,7 +59,7 @@ php artisan migrate
 php artisan serve
 ```
 
-Truy cập vào web qua http://localhost:8000
+Truy cập vào web qua http://127.0.0.1:8000/
 
 Các bước để code và đẩy code:
 
