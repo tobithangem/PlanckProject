@@ -22,44 +22,102 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## How to use?
+Các bước để bắt đầu dự án:
+1. Clone Source Code:
+```bash
+git clone git clone git@github.com:codeaamirkalimi/Task-Management-System-Laravel.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+git checkout develope
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Cài đặt các dependencies và packages cần thiết cho Laravel:
 
-## Laravel Sponsors
+```bash
+composer install
+```
+```bash
+npm install
+```
+3. Duplicate file .env.example, đổi tên thành .env sửa thông tin DB cho phù hợp
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+4. Chạy lệnh:
 
-### Premium Partners
+```bash
+php artisan key:generate
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```bash
+php artisan migrate
+```
 
-## Contributing
+5. Hoàn tất, khởi chạy laravel:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+php artisan serve
+```
 
-## Code of Conduct
+Truy cập vào web qua http://localhost:8000
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Các bước để code và đẩy code:
 
-## Security Vulnerabilities
+1. Tại branch develope hoặc branch gốc của phase code tương ứng, lấy code mới nhất từ repository gitlab
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+git pull
+```
 
-## License
+2. Sau khi pull hoàn tất, tạo 1 branch mới với tên branch dễ nhận diện (thường là theo tên task VD: Coding#123456)
+```bash
+git checkout -b <tên branch>
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. Viết code trên branch đã tạo (dùng lệnh git checkout -b sẽ vừa tạo mới, vừa chuyển ngay sang branch mới. Nếu chuyển sang branch đã tạo chỉ cần `git checkout <tên branch>`)
+
+Sau khi viết code xong thực hiện
+
+```bash
+git add .
+```
+
+```bash
+git commit -m "<giải thích nội dung thanh đổi của commit>"
+```
+
+4. Sau khi viết và test code ok, thực hiện đẩy code lên.
+
+```bash
+git checkout develope
+```
+
+```bash
+git pull
+```
+
+Lệnh trên giúp quay về nhánh dev chính để lấy code mới nhất từ repository về
+
+5. Ghép code từ nhánh chính sang nhánh của bản thân để đồng nhất code:
+
+```bash
+git checkout <tên nhánh>
+```
+
+```bash
+git rebase develope
+```
+
+Bước này sẽ kéo toàn bộ log của nhánh develope sang nhánh đang code, commit của nhánh hiện tại sẽ ở trên cùng
+
+6. Đẩy code của nhánh hiện tại lên repository
+
+```bash
+git push origin <tên nhánh>
+```
+
+Lưu ý: Tên nhánh lúc đẩy phải trùng với tên nhánh đang code và đẩy trong lúc đang checkout ở nhánh đó
+
+- Tuyệt đối không push lên nhánh develope hay push khi đang ở nhánh develope
+
+7. Truy cập vào gitlab và thực hiện merge request nhánh vừa đẩy vào nhánh develope, chờ leader review code và merge
